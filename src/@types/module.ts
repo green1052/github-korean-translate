@@ -9,7 +9,7 @@ declare global {
             selectors: string,
             target: RegExp,
             text: string,
-            elementType: ElementType
+            type: ElementType
         }[]
     };
 }

@@ -13,9 +13,9 @@ import {translatePlaceholder, translateTextContent} from "./util/translate";
 
                 for (const translate of module.translate) {
                     const method =
-                        translate.elementType === "textContent"
+                        translate.type === "textContent"
                             ? translateTextContent
-                            : translate.elementType === "placeholder"
+                            : translate.type === "placeholder"
                                 ? translatePlaceholder
                                 : undefined;
 
