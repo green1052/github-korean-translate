@@ -1,15 +1,15 @@
 /**
- * textContent 번역 함수
+ * innerHTML 번역 함수
  * @param selectors 원문이 있는 요소 셀렉터
  * @param target 원문
  * @param text 변역문
  */
-export function translateTextContent(selectors: string, target: RegExp, text: string): boolean {
+export function translateInnerHTML(selectors: string, target: RegExp, text: string): boolean {
     const element = document.querySelector(selectors);
 
     if (element === null || !element.textContent) return false;
 
-    element.textContent = element.textContent.replace(target, text);
+    element.innerHTML = element.innerHTML.replace(target, text);
 
     return true;
 }

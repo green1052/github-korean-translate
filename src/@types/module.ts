@@ -1,9 +1,9 @@
 export {};
 
 declare global {
-    type ElementType = "textContent" | "placeholder";
+    type ElementType = "innerHTML" | "placeholder";
 
-    type Module = {
+    interface Module {
         url?: RegExp,
         translate: {
             selectors: string,
@@ -11,5 +11,5 @@ declare global {
             text: string,
             type: ElementType
         }[]
-    };
+    }
 }

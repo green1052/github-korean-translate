@@ -1,4 +1,4 @@
-import {translatePlaceholder, translateTextContent} from "./util/translate";
+import {translateInnerHTML, translatePlaceholder} from "./util/translate";
 
 (() => {
     const context = require.context("./translate/", true, /\.ts$/);
@@ -13,8 +13,8 @@ import {translatePlaceholder, translateTextContent} from "./util/translate";
 
                 for (const translate of module.translate) {
                     const method =
-                        translate.type === "textContent"
-                            ? translateTextContent
+                        translate.type === "innerHTML"
+                            ? translateInnerHTML
                             : translate.type === "placeholder"
                                 ? translatePlaceholder
                                 : undefined;

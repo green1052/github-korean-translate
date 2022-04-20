@@ -7,29 +7,28 @@ export default {
             type: "placeholder"
         },
         {
-            // TODO HTML 태그 부숴먹음
             selectors: ".js-selected-navigation-item:nth-child(2)",
             target: /Pull requests/,
             text: "풀 리퀘스트",
-            type: "textContent"
+            type: "innerHTML"
         },
         {
             selectors: ".js-selected-navigation-item:nth-child(3)",
             target: /Issues/,
             text: "이슈",
-            type: "textContent"
+            type: "innerHTML"
         },
         {
             selectors: ".js-selected-navigation-item:nth-child(1)",
             target: /Marketplace/,
             text: "마켓 플레이스",
-            type: "textContent"
+            type: "innerHTML"
         },
         {
             selectors: ".js-selected-navigation-item:nth-child(5)",
             target: /Explore/,
             text: "탐색",
-            type: "textContent"
+            type: "innerHTML"
         }
     ]
 } as Module;
